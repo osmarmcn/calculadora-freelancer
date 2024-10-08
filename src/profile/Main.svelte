@@ -4,9 +4,12 @@
     import Aside from "../parts/Aside.svelte";
     import { debouncedAutosave } from "../scripts/utils";
   
+  
     $: formattedValueHour = new Calculate($app).formattedValueHour;
   
     $: debouncedAutosave($app);
+
+      
   </script>
   
   <div
@@ -14,10 +17,10 @@
   >
     <Aside>
       <img
-        class="border-orange-400 rounded-full border-4"
-        src={$app.user.avatar}
-        alt={$app.user.name}
-      />
+      class="border-orange-400 rounded-full border-4"
+      src={$app.user.avatar}
+      alt={$app.user.name}
+    />
       <h2 class="text-2xl font-medium text-gray-600 text-center mt-4">
         {$app.user.name}
       </h2>
